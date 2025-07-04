@@ -16,9 +16,11 @@ OBJ Kernel_Handle_Obj {
    *Kernel_Handle_Ptr;
 
 /* Constructor */
-Error   Kernel_Handle(Kernel_Handle_Ptr h,  bool    mut);
+Error   stdcall
+Kernel_Handle(Kernel_Handle_Ptr h,  bool    mut);
 
 /* Destructor */
-VOID   _Kernel_Handle(Kernel_Handle_Ptr h);
+VOID    stdcall
+_Kernel_Handle(Kernel_Handle_Ptr h);
 
 #endif  //  __LUNOVERSIS_KERNEL_HANDLE_H__
