@@ -7,8 +7,11 @@
 
 #include    "../Common.h"
 
-#define     ERROR_FATAL(msg)    (Err(msg, -1))
-#define     ERROR_OK()          (Err(NULL, 0))
+#define     LUNO_CERR_FATAL     -1
+#define     LUNO_CERR_OK        0
+
+#define     LUNO_ERROR_FATAL(msg)   (Err(msg,   LUNO_CERR_FATAL))
+#define     LUNO_ERROR_OK()         (Err(NULL,  LUNO_CERR_OK))
 
 OBJ Error {
     char   *msg;
