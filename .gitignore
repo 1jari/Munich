@@ -1,0 +1,7 @@
+.vscode/
+_deps/
+_pdfs/
+bin/
+build/
+Testing
+Makefile
