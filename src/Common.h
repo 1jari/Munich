@@ -6,6 +6,10 @@
 #include    <stdint.h>
 #include    <stdlib.h>
 
+#define     MUNICH_VERSION      "0.0.1"
+#define     MUNICH_MOTIF        "Os nossos dias serao pra sempre"
+#define     MUNICH_DATE         "7/2025"
+
 #define     VOID                void
 #define     OBJ                 typedef struct
 
