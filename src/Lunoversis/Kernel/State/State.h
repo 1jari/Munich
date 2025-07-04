@@ -23,11 +23,11 @@ OBJ Kernel_State_Obj {
    *Kernel_State_Ptr;
 
 /* Constructor */
-Error   stdcall
+MUNICH_API  Error   stdcall
 Kernel_State(Kernel_State_Ptr   s);
 
 /* Destructor */
-VOID    stdcall
+MUNICH_API  VOID    stdcall
 _Kernel_State(Kernel_State_Ptr   s);
 
 #endif  //  __LUNOVERSIS_KERNEL_STATE_H__

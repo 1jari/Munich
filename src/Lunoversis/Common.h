@@ -10,6 +10,17 @@
 #define     MUNICH_MOTIF        "Os nossos dias serao pra sempre"
 #define     MUNICH_DATE         "7/2025"
 
+#ifdef      _WIN32
+
+#ifdef      MUNICH_IMPORT
+#define     MUNICH_API      __declspec(dllimport)
+#else   //  MUNICH_IMPORT
+#define     MUNICH_API      __declspec(dllexport)
+#endif  //  MUNICH_IMPORT
+#else   //  _WIN32
+#define     MUNICH_API
+#endif  //  _WIN32
+
 #define     VOID                void
 #define     OBJ                 typedef struct
 

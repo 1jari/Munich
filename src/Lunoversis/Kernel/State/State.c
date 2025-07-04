@@ -1,7 +1,7 @@
 #include    "State.h"
 
 /* Constructor */
-Error   stdcall
+MUNICH_API  Error   stdcall
 Kernel_State(Kernel_State_Ptr   s) {
 
     /* Try to allocate some memory for handle list */
@@ -24,7 +24,7 @@ Kernel_State(Kernel_State_Ptr   s) {
 }
 
 /* Destructor */
-VOID    stdcall
+MUNICH_API  VOID   stdcall
 _Kernel_State(Kernel_State_Ptr   s) {
     if(s) {
         if(s->Handle_List) {
