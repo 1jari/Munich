@@ -19,13 +19,13 @@ OBJ Kernel_Service_Obj {
    *Kernel_Service_Ptr;
 
 /* Constructor */
-Error   stdcall
+MUNICH_API  Error   stdcall
 Kernel_Service( Kernel_Service_Ptr  s,
                 string              name,
                 UCHAR               flags);
 
 /* Destructor */
-VOID    stdcall
+MUNICH_API  VOID   stdcall
 _Kernel_Service( Kernel_Service_Ptr  s);
 
 #endif  //  __LUNOVERSIS_KERNEL_SERVICE_H__
