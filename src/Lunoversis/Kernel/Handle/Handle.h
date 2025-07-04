@@ -16,11 +16,11 @@ OBJ Kernel_Handle_Obj {
    *Kernel_Handle_Ptr;
 
 /* Constructor */
-Error   stdcall
+MUNICH_API  Error   stdcall
 Kernel_Handle(Kernel_Handle_Ptr h,  bool    mut);
 
 /* Destructor */
-VOID    stdcall
+MUNICH_API  VOID    stdcall
 _Kernel_Handle(Kernel_Handle_Ptr h);
 
 #endif  //  __LUNOVERSIS_KERNEL_HANDLE_H__

@@ -1,11 +1,11 @@
 #include    <stdio.h>
-#include    "Kernel/State/State.h"
+#include    <Lunoversis.h>
 
 int
 main(   int     argc,
         char  **argv) {
 
-    Kernel_State_Obj    k;
+    Kernel_State_Obj    k = {};
 
     Error ks_err  = Kernel_State(&k);
     if(ks_err.code == -1) {
