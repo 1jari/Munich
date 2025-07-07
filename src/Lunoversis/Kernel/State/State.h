@@ -8,26 +8,30 @@
 #include    "../Service/Service.h"
 
 OBJ Kernel_State_Obj {
-    ULONG   Sys_Flags;
-
     struct {
-        size_t              Service_List_Len;
-        Kernel_Service_Ptr  Service_List;
-    };
-
-    struct {
-        size_t              Handle_List_Len;
-        Kernel_Handle_Ptr   Handle_List;
+        size_t              Handle_List_Idx;
+        Kernel_Handle_Ptr   Handle_List_Buf;
+        Kernel_Handle_Ptr   Handle_List_Current;
     };
 }   Kernel_State_Obj,
    *Kernel_State_Ptr;
 
 /* Constructor */
-MUNICH_API  Error   stdcall
-Kernel_State(Kernel_State_Ptr   s);
+MUNICH_API  Error               stdcall
+Kernel_State(       Kernel_State_Ptr    s);
+
+/* Instructions */
+MUNICH_API  Error               stdcall
+Kernel_State_Load(  Kernel_Handle_Obj   h,
+                    Kernel_State_Ptr    s);
+
+/* Getter */
+MUNICH_API  Kernel_Handle_Ptr   stdcall
+Kernel_State_By_ID( USHORT              id,
+                    Kernel_State_Ptr    s);
 
 /* Destructor */
 MUNICH_API  VOID    stdcall
-_Kernel_State(Kernel_State_Ptr   s);
+_Kernel_State(      Kernel_State_Ptr    s);
 
 #endif  //  __LUNOVERSIS_KERNEL_STATE_H__

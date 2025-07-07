@@ -1,6 +1,6 @@
 #include    "Error.h"
 
-Error   Err(char   *msg,
+Error   Err(STRING  msg,
             LONG    code) {
     Error   e;
     e.msg   =   msg;

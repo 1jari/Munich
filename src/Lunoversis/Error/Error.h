@@ -14,12 +14,12 @@
 #define     LUNO_ERROR_OK()         (Err(NULL,  LUNO_CERR_OK))
 
 OBJ Error {
-    char   *msg;
+    STRING  msg;
     LONG    code;
 }   Error,
    *Error_Ptr;
 
-Error   Err(char   *msg,
+Error   Err(STRING  msg,
             LONG    code) ;
 
 #endif  //  __LUNOVERSIS_ERROR_H__

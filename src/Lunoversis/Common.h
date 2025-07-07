@@ -5,6 +5,7 @@
 #include    <stdio.h>
 #include    <stdint.h>
 #include    <stdlib.h>
+#include    <string.h>
 
 #define     MUNICH_VERSION      "0.0.1"
 #define     MUNICH_MOTIF        "Os nossos dias serao pra sempre"
@@ -24,26 +25,34 @@
 #define     VOID                void
 #define     OBJ                 typedef struct
 
-/* Just because i am lazy enough to hate pressing shift */
-#ifndef     null
-#define     null                ((void*)0)
-#endif  //  null
-
 #ifndef     stdcall
 #define     stdcall             __stdcall
 #endif //   stdcall
 
 typedef     VOID*               PVOID;
-typedef     char                CHAR;
-typedef     unsigned char       UCHAR;
+typedef     char*               PCHAR;
+
 typedef     int                 INT;
 typedef     unsigned int        UINT;
-typedef     long                LONG;
-typedef     unsigned long       ULONG;
+typedef     PCHAR               STRING;
+
+typedef     char                CHAR;
+typedef     unsigned char       UCHAR;
 typedef     short               SHORT;
 typedef     unsigned short      USHORT;
-typedef     char*               PCHAR;
-typedef     PCHAR               string;
+typedef     long                LONG;
+typedef     unsigned long       ULONG;
+typedef     long long           LONGLONG;
+typedef     unsigned long long  ULONGLONG;
 
+static  USHORT  stdcall
+Generate_Hash(      STRING  str) {
+    int r = 0;
+    for(int i = 0; i < strlen(str); i++) {
+        CHAR c  =   str[i];
+        r       =   r + c;
+    }
+    return r;
+}
 
 #endif  //  __LUNOVERSIS_COMMON_H__

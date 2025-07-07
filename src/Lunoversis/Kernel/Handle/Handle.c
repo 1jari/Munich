@@ -1,9 +1,12 @@
 #include    "Handle.h"
 
 /* Constructor */
-Error   stdcall
-Kernel_Handle(Kernel_Handle_Ptr h,  bool    mut) {
+MUNICH_API  Error   stdcall
+Kernel_Handle(  USHORT              id,
+                Kernel_Handle_Ptr   h,
+                bool                mut) {
 
+    h->id   =   id;     /* Set ID */
     h->mut  =   mut;    /* Set mutable flag */
     h->len  =   0;      /* Set initial length as 0 */
 
@@ -21,8 +24,15 @@ Kernel_Handle(Kernel_Handle_Ptr h,  bool    mut) {
     return  LUNO_ERROR_OK();
 }
 
+MUNICH_API  Error   stdcall
+Kernel_HandleA( STRING              name,
+                Kernel_Handle_Ptr   h,
+                bool                mut) {
+    return  Kernel_Handle(Generate_Hash(name), h, mut);
+}
+
 /* Destructor */
-VOID    stdcall
+MUNICH_API  VOID   stdcall
 _Kernel_Handle(Kernel_Handle_Ptr h) {
     if(h) {
         if(h->buf) {

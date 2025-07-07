@@ -5,6 +5,7 @@
 #include    "../../Error/Error.h"
 
 OBJ Kernel_Handle_Obj {
+    USHORT  id;
     bool    alive;
     bool    mut;
 
@@ -15,9 +16,15 @@ OBJ Kernel_Handle_Obj {
 }   Kernel_Handle_Obj,
    *Kernel_Handle_Ptr;
 
-/* Constructor */
+/* Constructors */
 MUNICH_API  Error   stdcall
-Kernel_Handle(Kernel_Handle_Ptr h,  bool    mut);
+Kernel_Handle(  USHORT              id,
+                Kernel_Handle_Ptr   h,
+                bool                mut);
+MUNICH_API  Error   stdcall
+Kernel_HandleA( STRING              name,
+                Kernel_Handle_Ptr   h,
+                bool                mut);
 
 /* Destructor */
 MUNICH_API  VOID    stdcall

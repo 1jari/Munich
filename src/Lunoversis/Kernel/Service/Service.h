@@ -12,7 +12,6 @@
 
 OBJ Kernel_Service_Obj {
     Kernel_Handle_Obj   handle;
-    string              name;
     UCHAR               flags;
 
 }   Kernel_Service_Obj,
@@ -21,7 +20,7 @@ OBJ Kernel_Service_Obj {
 /* Constructor */
 MUNICH_API  Error   stdcall
 Kernel_Service( Kernel_Service_Ptr  s,
-                string              name,
+                STRING              name,
                 UCHAR               flags);
 
 /* Destructor */
