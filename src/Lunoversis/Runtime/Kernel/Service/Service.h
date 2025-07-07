@@ -1,8 +1,8 @@
-#ifndef     __LUNOVERSIS_KERNEL_SERVICE_H__
-#define     __LUNOVERSIS_KERNEL_SERVICE_H__
+#ifndef     __LUNOVERSIS_RUNTIME_KERNEL_SERVICE_H__
+#define     __LUNOVERSIS_RUNTIME_KERNEL_SERVICE_H__
 
 
-#include    "../../Common.h"
+#include    "../../../Common.h"
 #include    "../../Error/Error.h"
 #include    "../Handle/Handle.h"
 
@@ -27,4 +27,4 @@ Kernel_Service( Kernel_Service_Ptr  s,
 MUNICH_API  VOID   stdcall
 _Kernel_Service( Kernel_Service_Ptr  s);
 
-#endif  //  __LUNOVERSIS_KERNEL_SERVICE_H__
+#endif  //  __LUNOVERSIS_RUNTIME_KERNEL_SERVICE_H__

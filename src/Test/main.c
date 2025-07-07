@@ -5,22 +5,17 @@ int
 main(   int     argc,
         char  **argv) {
 
-    Kernel_State_Obj    k = {};
+    Runtime_Session_Obj Session = {};
 
-    Error ks_err  = Kernel_State(&k);
+    Error ss_Err  = Runtime_Session(&Session);
 
-    Kernel_Handle_Obj handle = {};
-    Kernel_HandleA("teste", &handle, false);
-
-    Kernel_State_Load(handle, &k);
-
-    if(ks_err.code == -1) {
-        printf("Kernel>State: %s\n", ks_err.msg);
+    if(ss_Err.code == LUNO_CERR_FATAL) {
+        printf("Runtime>Session: %s\n", ss_Err.msg);
         exit(-1);
     }
 
-    printf("Kernel>State: Created!\n");
+    printf("Runtime>Session: Created!\n");
 
-    _Kernel_State(&k);
+    _Runtime_Session(&Session);
     return 0;
 }

@@ -1,7 +1,7 @@
-#ifndef     __LUNOVERSIS_KERNEL_STATE_H__
-#define     __LUNOVERSIS_KERNEL_STATE_H__
+#ifndef     __LUNOVERSIS_RUNTIME_KERNEL_STATE_H__
+#define     __LUNOVERSIS_RUNTIME_KERNEL_STATE_H__
 
-#include    "../../Common.h"
+#include    "../../../Common.h"
 #include    "../../Error/Error.h"
 
 #include    "../Handle/Handle.h"
@@ -34,4 +34,4 @@ Kernel_State_By_ID( USHORT              id,
 MUNICH_API  VOID    stdcall
 _Kernel_State(      Kernel_State_Ptr    s);
 
-#endif  //  __LUNOVERSIS_KERNEL_STATE_H__
+#endif  //  __LUNOVERSIS_RUNTIME_KERNEL_STATE_H__

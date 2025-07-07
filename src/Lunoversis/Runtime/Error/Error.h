@@ -1,11 +1,11 @@
-#ifndef     __LUNOVERSIS_ERROR_H__
-#define     __LUNOVERSIS_ERROR_H__
+#ifndef     __LUNOVERSIS_RUNTIME_ERROR_H__
+#define     __LUNOVERSIS_RUNTIME_ERROR_H__
 
 #include    <stdio.h>
 #include    <stdlib.h>
 #include    <string.h>
 
-#include    "../Common.h"
+#include    "../../Common.h"
 
 #define     LUNO_CERR_FATAL     -1
 #define     LUNO_CERR_OK        0
@@ -22,4 +22,4 @@ OBJ Error {
 Error   Err(STRING  msg,
             LONG    code) ;
 
-#endif  //  __LUNOVERSIS_ERROR_H__
+#endif  //  __LUNOVERSIS_RUNTIME_ERROR_H__

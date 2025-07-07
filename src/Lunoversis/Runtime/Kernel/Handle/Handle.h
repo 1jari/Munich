@@ -1,7 +1,7 @@
-#ifndef     __LUNOVERSIS_KERNEL_HANDLE_H__
-#define     __LUNOVERSIS_KERNEL_HANDLE_H__
+#ifndef     __LUNOVERSIS_RUNTIME_KERNEL_HANDLE_H__
+#define     __LUNOVERSIS_RUNTIME_KERNEL_HANDLE_H__
 
-#include    "../../Common.h"
+#include    "../../../Common.h"
 #include    "../../Error/Error.h"
 
 OBJ Kernel_Handle_Obj {
@@ -30,4 +30,4 @@ Kernel_HandleA( STRING              name,
 MUNICH_API  VOID    stdcall
 _Kernel_Handle(Kernel_Handle_Ptr h);
 
-#endif  //  __LUNOVERSIS_KERNEL_HANDLE_H__
+#endif  //  __LUNOVERSIS_RUNTIME_KERNEL_HANDLE_H__
