@@ -10,11 +10,17 @@ main(   int     argc,
     Error ss_Err  = Runtime_Session(&Session);
 
     if(ss_Err.code == LUNO_CERR_FATAL) {
-        printf("Runtime>Session: %s\n", ss_Err.msg);
+        printf("Runtime>Session: %s / Quitting...\n", ss_Err.msg);
         exit(-1);
     }
 
     printf("Runtime>Session: Created!\n");
+
+    while(Session.Running) {
+
+    }
+
+    printf("Runtime>Session: Quitting...\n");
 
     _Runtime_Session(&Session);
     return 0;

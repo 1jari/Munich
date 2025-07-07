@@ -14,8 +14,12 @@ Runtime_Session(    Runtime_Session_Ptr ss) {
     Error   ks_Err  =   Kernel_State(&ss->State);
 
     if(ks_Err.code == LUNO_CERR_FATAL) {
+        ss->Running =   false;
         return  ks_Err;
     }
+
+    /* Set state as running */
+    ss->Running     =   true;
 
     return  LUNO_ERROR_OK();
 }

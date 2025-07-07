@@ -7,6 +7,7 @@
 #include    "../Kernel/Kernel.h"
 
 OBJ Runtime_Session_Obj {
+    bool                Running;
     Kernel_State_Obj    State;
 }   Runtime_Session_Obj,
    *Runtime_Session_Ptr;
